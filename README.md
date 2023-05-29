@@ -256,7 +256,7 @@ We perform the OpenCR Test by following the below steps:
 --> After that, `PUSH SW 1` button was pushed for a few seconds to move the robot forward around 30 centimeters as recommended. 
 --> And `PUSH SW 2` for a few seconds to command the robot to rotate 180 degrees in place.
 
-# Bringuo
+# Bringup
 
 ## Run roscore
 
