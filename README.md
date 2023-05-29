@@ -18,9 +18,9 @@ wget https://raw.githubusercontent.com/ROBOTIS-GIT/robotis_tools/master/install_
 
 ```
 chmod 755 ./install_ros_noetic.sh 
-$ bash ./install_ros_noetic.sh
+bash ./install_ros_noetic.sh
 ```
-![image](https://user-images.githubusercontent.com/92040822/200147308-5d60e464-2113-4098-9ad6-5bf30fee222d.png)
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/705167b4-71e5-4b0d-899f-73657e186e95)
 
 
 ## 2. Install Dependent ROS Packages
@@ -31,7 +31,7 @@ Open the terminal with Ctrl+Alt+T from Remote PC.
 sudo apt-get install ros-noetic-joy ros-noetic-teleop-twist-joy ros-noetic-teleop-twist-keyboard ros-noetic-laser-proc ros-noetic-rgbd-launch ros-noetic-rosserial-arduino ros-noetic-rosserial-python ros-noetic-rosserial-client ros-noetic-rosserial-msgs ros-noetic-amcl ros-noetic-map-server ros-noetic-move-base ros-noetic-urdf ros-noetic-xacro ros-noetic-compressed-image-transport ros-noetic-rqt* ros-noetic-rviz ros-noetic-gmapping ros-noetic-navigation ros-noetic-interactive-markers
 ```
 
-![image](https://user-images.githubusercontent.com/92040822/200147456-6e07351b-d873-4a23-af36-dd7b33e2d682.png)
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/bb121c0a-ad3f-442e-8831-b5144b998ee8)
 
 ## 3 Install TurtleBot3 Packages
 
@@ -39,16 +39,16 @@ Download the source codes and build them.
 
 ```
 cd ~/catkin_ws/src/
-$ git clone -b noetic-devel https://github.com/ROBOTIS-GIT/DynamixelSDK.git
-$ git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
-$ git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git
-$ cd ~/catkin_ws && catkin_make
-$ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+git clone -b noetic-devel https://github.com/ROBOTIS-GIT/DynamixelSDK.git
+git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
+git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git
+cd ~/catkin_ws && catkin_make
+echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 ```
 
-![image](https://user-images.githubusercontent.com/92040822/200147701-b75fadd2-5197-4183-b06b-9e17efbfb6d9.png)
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/b5fb2261-710d-442c-b78a-294ca3af9099)
 
-![image](https://user-images.githubusercontent.com/92040822/200147808-b976d8f7-2505-4337-92a3-e7a4c286b708.png)
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/490651b9-573e-463f-a6ae-cd276a754151)
 
 ## 4. Network Configuration
 
@@ -58,7 +58,7 @@ Connect PC to a WiFi device and find the assigned IP address with the command be
 ifconfig
 ```
 
-![image](https://user-images.githubusercontent.com/92040822/200147852-c903d9f7-cc37-4418-9bc9-e3f6918dc929.png)
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/814c53a7-443b-43bf-b392-f1183de13fe8)
 
 Open the file and update the ROS IP settings with the command below.
 
@@ -69,13 +69,16 @@ nano ~/.bashrc
 Press Ctrl+END or Alt+/ to move the cursor to the end of line.
 Modify the address of localhost in the ROS_MASTER_URI and ROS_HOSTNAME with the IP address acquired from the above terminal window.
 
-#image
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/f843eeaa-3a8e-4c13-afa1-5887dea3b331)
 
 Source the bashrc with below command.
 
 ```
 source ~/.bashrc
 ```
+
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/d0edbc84-0068-46b7-9d60-2953a9e34370)
+
 
 # SBC Setup using:
 - Pen drive
@@ -128,15 +131,16 @@ Replace the WIFI SSID and WIFI PASSWORD with your wifi SSID and password once th
 Press Ctrl+S to save the document and Ctrl+X to close it.
 
 ![image](https://github.com/sanjiblama28/San/blob/main/Veed%20Recording%20-%206%20November%202022%20(4).gif)
-![image](https://github.com/sanjiblama28/Github/blob/main/20221201_030911.jpg)
-![image](https://user-images.githubusercontent.com/92040822/204874933-6a3d4aa7-dc98-49bc-9071-e6c457810958.png)
 
 ## Boot Up the Raspberry Pi
+
+```
 a. Connect the HDMI cable of the monitor to the HDMI port of Raspberry Pi.
 b. Connect input devices to the USB port of Raspberry Pi.
 c. Insert the microSD card.
 d. Connect the power (either with USB or OpenCR) to turn on the Raspberry Pi.
 e. Login with ID ubuntu and PASSWORD turtlebot.
+```
 
 ## ROS Network Configuration
 
@@ -146,6 +150,8 @@ Confirm the WiFi IP address.
 ```
 ifconfig
 ```
+
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/954cdfc4-b419-4b8e-aa93-1b0fb572cac0)
 
 Edit the .bashrc file.
 ```
@@ -158,12 +164,17 @@ export ROS_MASTER_URI=http://{IP_ADDRESS_OF_REMOTE_PC}:11311
 export ROS_HOSTNAME={IP_ADDRESS_OF_RASPBERRY_PI_3}
 ```
 
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/6fc0cdbf-f92b-4feb-82bc-41082cc19115)
+
 Save the file with Ctrl + S and exit the nano editor with Ctrl + X.
 
 Apply changes with the command below.
 ```
 source ~/.bashrc
 ```
+
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/d5d6e177-48a2-49ea-966a-cb86c9c07dab)
+
 
 ## NEW LDS-02 Configuration
 
@@ -181,11 +192,9 @@ rm -r turtlebot3_description/ turtlebot3_teleop/ turtlebot3_navigation/ turtlebo
 cd ~/catkin_ws && catkin_make
 ```
 
-![image](https://user-images.githubusercontent.com/92040822/204878291-2f56bb73-87af-4312-a460-f5bb49b0a4c3.png)
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/bd1f3ccd-db07-4cb6-afb2-0387d7a18d68)
 
-![image](https://user-images.githubusercontent.com/92040822/204879981-fdcf8708-b207-4d3e-a49f-adec275807a8.png)
-
-![image](https://user-images.githubusercontent.com/92040822/204987063-623a27cb-3cb1-4345-b4c5-4e0a60985e3e.png)
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/82f920ef-f76e-471b-b607-2eaa05415958)
 
 Now, 
 2. Export the LDS MODEL to the bashrc file. LDS-01 or LDS-02, depending on your LDS model.
@@ -257,6 +266,8 @@ Run roscore from PC.
 roscore
 ```
 
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/8944c73e-35c6-4476-8ffa-27598bb4007a)
+
 # Bringup TurtleBot3
 
 TIP: Before executing this command, you have to specify the model name of TurtleBot3. The ${TB3_MODEL} is the name of the model you are using in burger, waffle, waffle_pi.
@@ -268,11 +279,20 @@ The default password is turtlebot.
 ssh ubuntu@{IP_ADDRESS_OF_RASPBERRY_PI}
 ```
 
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/61718313-d310-4e5c-8a81-e4de0a0cc20e)
+
+
 Bring up basic packages to start TurtleBot3 applications.
 
 ```
 export TURTLEBOT3_MODEL=${TB3_MODEL}
 roslaunch turtlebot3_bringup turtlebot3_robot.launch
+```
+
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/41d2127f-e2ee-48d8-8eea-e619ee7e91a2)
+
+```
+We were unable to resolve this issue despite the fact that there was no issue with the IP of the Remote PC or the IP of the Raspberry Pi, and that both of them were connected to the same network, but the first three segments of their IP addresses were different. i.e. Remote PC = 192.168.197.128 Raspberry Pi = 192.168.0.89 and attempted to resolve the problem by checking network connectivity, firewall and security settings, and ROS environment variables, as well as verifying ROS node network configuration and restarting the ROS core, but I was unable to find a solution.
 ```
 
 # Simulation of Obstacle Detection
@@ -287,6 +307,9 @@ export TURTLEBOT3_MODEL=burger
 roslaunch turtlebot3_gazebo turtlebot3_house.launch
 ```
 
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/58c4ab54-9e5c-4650-acfb-1106a3053201)
+
+
 ## Run SLAM Node
 
 Open a new terminal from Remote PC with Ctrl + Alt + T and run the SLAM node. Gmapping SLAM method is used by default.
@@ -296,6 +319,8 @@ Please use the proper keyword among burger, waffle, waffle_pi for the TURTLEBOT3
 export TURTLEBOT3_MODEL=burger
 roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
 ```
+
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/1f5dfcad-55ac-45e1-8ae2-a8f314255186)
 
 ## Run Teleoperation Node
 
@@ -320,6 +345,8 @@ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
  CTRL-C to quit
  ```
  
+ ![image](https://github.com/sanjiblama28/VIP/assets/92040822/798d8a4a-497a-4284-821f-06e9655ccca5)
+
  ## Run Obstacle launch
  
  ```
@@ -327,6 +354,8 @@ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
  roslaunch turtlebot3_example turtlebot3_obstacle.launch
  ```
  
+ ![image](https://github.com/sanjiblama28/VIP/assets/92040822/71690efb-b6bc-4c7c-ae75-9b69acb3d4cd)
+
  # Simulation of Pick-up and Drop
  
 ## Run Gazebo
@@ -338,6 +367,8 @@ export TURTLEBOT3_MODEL=waffle_pi
 roslaunch turtlebot3_manipulation_gazebo turtlebot3_manipulation_gazebo.launch
 ```
 
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/7a46cdf2-9327-4a30-8ad5-d159f0e740fc)
+
 ## Run move_group Node
 
 [Remote PC] In order to use Moveit feature, launch move_group node. If you press [▶] button in Gazebo to start simulation, use the following command.
@@ -348,6 +379,10 @@ export TURTLEBOT3_MODEL=waffle_pi
 roslaunch turtlebot3_manipulation_moveit_config move_group.launch
 ```
 
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/8723f78e-c760-42be-a544-6ad46103d996)
+
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/d54d2740-cc99-40a6-aa82-853e0ec36149)
+
 ## Run RViz
 
 [Remote PC] Use Moveit feature in RViz by reading moveit.rviz file where Moveit enviroment data is configured.
@@ -357,6 +392,9 @@ You can control the mounted manipulator using an interactive marker, and simulat
 export TURTLEBOT3_MODEL=waffle_pi
 roslaunch turtlebot3_manipulation_moveit_config moveit_rviz.launch
 ```
+
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/fdf84ef4-e0ac-48a9-af91-68e7f823ef88)
+
 
 ## Run ROBOTIS GUI Controller
 
@@ -369,6 +407,11 @@ Joint Space Control: Control based on each joint angle.
 export TURTLEBOT3_MODEL=waffle_pi
 roslaunch turtlebot3_manipulation_gui turtlebot3_manipulation_gui.launch
 ```
+
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/f4a3ee06-1696-4bcc-9ea9-c32fd6b46acd)
+
+
+
 
 
 
