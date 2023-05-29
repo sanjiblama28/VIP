@@ -1,6 +1,6 @@
 # PC Setup using:
 - Ubuntu 20.04
-- ROS Foxy
+- ROS Neotic
 
 ## 1. Install ROS on Remote PC
 
