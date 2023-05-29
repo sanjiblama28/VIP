@@ -12,7 +12,9 @@ sudo apt upgrade
 wget https://raw.githubusercontent.com/ROBOTIS-GIT/robotis_tools/master/install_ros_noetic.sh
 ```
 
-![image](https://user-images.githubusercontent.com/92040822/200147279-93635a26-e453-4ef7-81ec-3d65961c7964.png)
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/ba4e0364-966d-438b-bf39-76f020aabf61)
+
+![image](https://github.com/sanjiblama28/VIP/assets/92040822/62d21f3b-241a-42c3-99bf-f61d86bba58f)
 
 ```
 chmod 755 ./install_ros_noetic.sh 
