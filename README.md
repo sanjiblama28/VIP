@@ -291,9 +291,7 @@ roslaunch turtlebot3_bringup turtlebot3_robot.launch
 
 ![image](https://github.com/sanjiblama28/VIP/assets/92040822/41d2127f-e2ee-48d8-8eea-e619ee7e91a2)
 
-```
 We were unable to resolve this issue despite the fact that there was no issue with the IP of the Remote PC or the IP of the Raspberry Pi, and that both of them were connected to the same network, but the first three segments of their IP addresses were different. i.e. Remote PC = 192.168.197.128 Raspberry Pi = 192.168.0.89 and attempted to resolve the problem by checking network connectivity, firewall and security settings, and ROS environment variables, as well as verifying ROS node network configuration and restarting the ROS core, but I was unable to find a solution.
-```
 
 # Simulation of Obstacle Detection
 
