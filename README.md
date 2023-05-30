@@ -356,59 +356,6 @@ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
  
  ![image](https://github.com/sanjiblama28/VIP/assets/92040822/71690efb-b6bc-4c7c-ae75-9b69acb3d4cd)
 
- # Simulation of Pick-up and Drop
- 
-## Run Gazebo
-
-[Remote PC] Load TurtleBot3 with OpenMANIPULATOR-X into Gazebo world with the following command.
-
-```
-export TURTLEBOT3_MODEL=waffle_pi
-roslaunch turtlebot3_manipulation_gazebo turtlebot3_manipulation_gazebo.launch
-```
-
-![image](https://github.com/sanjiblama28/VIP/assets/92040822/7a46cdf2-9327-4a30-8ad5-d159f0e740fc)
-
-## Run move_group Node
-
-[Remote PC] In order to use Moveit feature, launch move_group node. If you press [▶] button in Gazebo to start simulation, use the following command.
-With a successful launch, “You can start planning now!” message will be printed on the terminal.
-
-```
-export TURTLEBOT3_MODEL=waffle_pi
-roslaunch turtlebot3_manipulation_moveit_config move_group.launch
-```
-
-![image](https://github.com/sanjiblama28/VIP/assets/92040822/8723f78e-c760-42be-a544-6ad46103d996)
-
-![image](https://github.com/sanjiblama28/VIP/assets/92040822/d54d2740-cc99-40a6-aa82-853e0ec36149)
-
-## Run RViz
-
-[Remote PC] Use Moveit feature in RViz by reading moveit.rviz file where Moveit enviroment data is configured.
-You can control the mounted manipulator using an interactive marker, and simulate the motion of goal position, which helps preventing a possible physical contact by simulating the motion in advance.
-
-```
-export TURTLEBOT3_MODEL=waffle_pi
-roslaunch turtlebot3_manipulation_moveit_config moveit_rviz.launch
-```
-
-![image](https://github.com/sanjiblama28/VIP/assets/92040822/fdf84ef4-e0ac-48a9-af91-68e7f823ef88)
-
-
-## Run ROBOTIS GUI Controller
-
-[Remote PC] You can also use ROBOTIS GUI to control the OpenMANIPULATOR-X in Gazebo. The GUI supports Task Space and Joint Space controls. Use any control methods you prefer.
-
-Task Space Control: Control based on the valid gripping position (represented as a small red cube between the grippers) of the end-effector of the OpenMANIPULATOR-X.
-Joint Space Control: Control based on each joint angle.
-
-```
-export TURTLEBOT3_MODEL=waffle_pi
-roslaunch turtlebot3_manipulation_gui turtlebot3_manipulation_gui.launch
-```
-
-![image](https://github.com/sanjiblama28/VIP/assets/92040822/f4a3ee06-1696-4bcc-9ea9-c32fd6b46acd)
 
 
 
